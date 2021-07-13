@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+
+/*-----------------------------
+        default styles
+-----------------------------*/
+:root {
+    --btn-primary: #E02C6D;
+    --para-text: #6C6C6C;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+img {
+    height: 5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+li {
+    list-style: none;
+}
+
+.navbar,
+.navbar-nav,
+.main-heading {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: var(--btn-primary);
+}
+
+/*-----------------------------
+        header part
+-----------------------------*/
+
+header {
+    height: 550px;
+    background-color: #1208a8ec;
+    color: #ffffff;
+}
+
+.navbar {
+    justify-content: space-around;
+    font-weight: 500;
+    font-size: 1em;
+    padding-top: 42px;
+    height: 44px;
+    margin-bottom: 67px;
+}
+
+.nav-item {
+    margin-right: 36px;
+}
+
+.fa-sign-in-alt {
+    margin-right: 12px;
+}
+
+.main-heading {
+    justify-content: space-around;
+}
+
+.head-title {
+    font-size: 4em;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 27px;
+}
+
+.heading-half img {
+    height: 20em;
+}
+
+.fa-arrow-right {
+    margin-left: 12px;
+}
+
+/*-----------------------------
+        main part
+-----------------------------*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
