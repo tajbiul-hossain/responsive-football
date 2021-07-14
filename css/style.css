@@ -91,7 +91,7 @@ section {
         header
 -----------------------------*/
 header {
-    height: 550px;
+    height: 500px;
     background-color: #0f095cd0;
     color: #ffffff;
     padding: 42px 156px 86px;
@@ -100,6 +100,10 @@ header {
 
 header:hover .main-heading {
     transform: scale(1.1);
+}
+
+header:hover .heading-half img {
+    transform: scale(.7) rotate(360deg);
 }
 
 /*-----------------------------
@@ -166,6 +170,7 @@ header:hover .main-heading {
 .heading-half img {
     width: 100%;
     height: 100%;
+    transition: transform 2s ease-in-out;
 }
 
 .fa-arrow-right {
@@ -377,6 +382,7 @@ footer p {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: 550px;
         padding: 30px;
         padding-bottom: 0;
         margin-bottom: 30px;
@@ -534,7 +540,7 @@ footer p {
     }
 
     .head-title {
-        font-size: 3.2em;
+        font-size: 3em;
     }
 
     .heading-half img {
