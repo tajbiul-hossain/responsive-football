@@ -59,7 +59,7 @@ section {
     transform: scale(1.1);
 }
 
-.btn1 {
+.read-more-btn {
     font-size: 12px;
     display: inline-block;
     padding: 5px 10px;
@@ -68,7 +68,7 @@ section {
     transition: all .5s ease-in-out;
 }
 
-.btn1:hover {
+.read-more-btn:hover {
     box-shadow: -2px 2px 8px 2px rgba(255, 255, 255, 0.5);
     transform: scale(1.05);
 }
@@ -88,9 +88,8 @@ section {
 }
 
 /*-----------------------------
-        header part
+        header
 -----------------------------*/
-
 header {
     height: 550px;
     background-color: #0f095cd0;
@@ -103,6 +102,9 @@ header:hover .main-heading {
     transform: scale(1.1);
 }
 
+/*-----------------------------
+        navigation
+-----------------------------*/
 .navbar {
     justify-content: space-between;
     font-weight: 500;
@@ -144,6 +146,9 @@ header:hover .main-heading {
     margin-right: 12px;
 }
 
+/*-----------------------------
+        main heading
+-----------------------------*/
 .main-heading {
     margin-top: 60px;
     justify-content: space-between;
@@ -168,15 +173,17 @@ header:hover .main-heading {
 }
 
 /*-----------------------------
-        main part
+        main section
 -----------------------------*/
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*-----------------------------
+        players section
+-----------------------------*/
 .players {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -222,6 +229,9 @@ main {
     overflow: hidden;
 }
 
+/*-----------------------------
+        highlights section
+-----------------------------*/
 .highlights {
     margin-top: 10px;
     display: flex;
@@ -260,6 +270,9 @@ main {
     transform: scale(.9);
 }
 
+/*------------------------------------
+        gallery & videos section
+------------------------------------*/
 .section-title {
     font-size: 3em;
     font-weight: 700;
@@ -354,8 +367,12 @@ footer p {
         media queries
 -----------------------------*/
 
-@media only screen and (max-width: 767px) {
 
+
+/*-----------------------------
+        mobile devices
+-----------------------------*/
+@media only screen and (max-width: 767px) {
     header {
         display: flex;
         flex-direction: column;
@@ -494,6 +511,10 @@ footer p {
     }
 }
 
+
+/*------------------------------------------
+        landscae mobile & tablets
+------------------------------------------*/
 @media only screen and (min-width: 767px) and (max-width: 991px) {
     header {
         padding: 30px;
@@ -545,6 +566,10 @@ footer p {
     }
 }
 
+
+/*----------------------------------
+        laptop/desktop devices
+----------------------------------*/
 @media only screen and (min-width: 991px) and (max-width: 1199px) {
     .head-title {
         font-size: 3.6em;
