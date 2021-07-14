@@ -16,6 +16,15 @@ body {
     width: 100%;
     text-transform: capitalize;
     scroll-behavior: smooth;
+    background-color: #0f0f14;
+    color: #ffffffda;
+}
+
+.offset:before {
+    height: 8rem;
+    margin-top: -2rem;
+    content: "";
+    display: block;
 }
 
 a {
@@ -43,7 +52,7 @@ li {
 }
 
 .btn:hover {
-    box-shadow: -5px 5px 10px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: -5px 5px 10px 2px rgba(255, 255, 255, 0.5);
     transform: scale(1.1);
 }
 
@@ -58,7 +67,7 @@ li {
 }
 
 .btn1:hover {
-    box-shadow: -2px 2px 8px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: -2px 2px 8px 2px rgba(255, 255, 255, 0.5);
     transform: scale(1.05);
 }
 
@@ -98,10 +107,21 @@ header:hover .main-heading {
     font-size: .9em;
     height: 44px;
     margin-bottom: 67px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: -1px;
+    width: 100%;
+    z-index: 1;
+    background-color: #082c8d79;
 }
 
 .nav-item {
     margin-right: 36px;
+}
+
+.log-in {
+    margin-right: 40px;
 }
 
 .fa-sign-in-alt {
@@ -109,6 +129,7 @@ header:hover .main-heading {
 }
 
 .main-heading {
+    margin-top: 60px;
     justify-content: space-between;
     transition: transform .5s ease-in-out;
 }
@@ -141,7 +162,7 @@ main {
 
 section {
     width: 75%;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .players {
@@ -156,7 +177,7 @@ section {
     width: 100%;
     height: 500px;
     padding: 12px;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.15);
 }
 
 .player img {
@@ -172,7 +193,6 @@ section {
 .player-name {
     font-weight: 700;
     font-size: 1.1em;
-    color: #18191F;
 }
 
 .player:hover .player-name {
@@ -193,6 +213,8 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 300px;
+    padding-top: 50px;
 }
 
 .highlights-half {
@@ -200,7 +222,6 @@ section {
 }
 
 .highlights-title {
-    color: #0A0826;
     font-weight: 700;
     font-size: 2.5em;
     margin: 0;
@@ -229,7 +250,8 @@ section {
 .section-title {
     font-size: 3em;
     font-weight: 700;
-    color: #18191F;
+    margin: 0;
+    margin-bottom: 50px;
 }
 
 .images,
@@ -281,20 +303,20 @@ footer img {
 }
 
 .social-icons a {
-    color: #969BAB;
+    color: #c0c5d4;
     margin-right: 14px;
     font-size: 1.1em;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 }
 
 .facebook:hover {
-    color: #3b5998;
+    color: #3a5fad;
 }
 
 .insta:hover {
-    color: #8a3ab9;
+    color: #9539ca;
 }
 
 .twitter:hover {
@@ -315,27 +337,6 @@ footer p {
 -----------------------------*/
 
 @media only screen and (max-width: 767px) {
-    .navbar {
-        margin: 0;
-        margin-bottom: 20px;
-    }
-
-    .navbar-nav {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav-item {
-        margin-bottom: 10px;
-    }
-
-    .main-heading {
-        flex-direction: column;
-    }
-
     header {
         display: flex;
         flex-direction: column;
@@ -346,23 +347,49 @@ footer p {
     }
 
     .navbar {
+        padding: 10px;
+        margin-bottom: 20px;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        top: 0;
+        left: -1px;
         font-size: .8em;
-    }
-
-    .checkbtn {
-        display: block;
+        z-index: 1;
+        background-color: #082c8d79;
     }
 
     .navbar-nav {
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
         position: fixed;
         height: 50%;
-        background: #0d3fc9ee;
-        top: 100px;
-        left: -100%;
+        background: #082c8d79;
+        top: 64px;
+        left: -109%;
         justify-content: center;
         align-items: center;
         transition: all .5s;
         z-index: 1;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .nav-link {
+        transition: background-color .5s ease-in-out,
+            color .5s ease-in-out,
+            padding.5s ease-in-out;
+    }
+
+    .nav-item:hover .nav-link {
+        background-color: rgba(255, 255, 255, 0.87);
+        padding: 5px 7px;
+        color: #070708;
     }
 
     nav ul li {
@@ -370,8 +397,21 @@ footer p {
         line-height: 50px;
     }
 
+    .checkbtn {
+        display: block;
+        margin: 0;
+    }
+
     #check:checked~ul {
         left: 0;
+    }
+
+    .log-in {
+        margin-right: 20px;
+    }
+
+    .main-heading {
+        flex-direction: column;
     }
 
     .head-title {
@@ -395,13 +435,13 @@ footer p {
     }
 
     .highlights-section {
-        display: flex;
         flex-direction: column;
-        align-items: center;
+        height: 600px;
     }
 
     .highlights-half img {
-        margin-top: 50px;
+        margin: 0;
+        margin-top: 30px;
     }
 
     .images,
@@ -448,13 +488,13 @@ footer p {
     }
 
     .highlights-section {
-        display: flex;
         flex-direction: column;
-        align-items: center;
+        height: 600px;
     }
 
     .highlights-half img {
-        margin-top: 50px;
+        margin: 0;
+        margin-top: 30px;
     }
 
     .images {
