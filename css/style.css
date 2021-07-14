@@ -126,6 +126,16 @@ header:hover .main-heading {
     margin-right: 36px;
 }
 
+.nav-link {
+    transition: all .5s ease-in-out;
+}
+
+.nav-item:hover .nav-link {
+    background-color: rgba(255, 255, 255, 0.87);
+    padding: 5px 7px;
+    color: #070708;
+}
+
 .log-in {
     margin-right: 156px;
 }
@@ -345,6 +355,7 @@ footer p {
 -----------------------------*/
 
 @media only screen and (max-width: 767px) {
+
     header {
         display: flex;
         flex-direction: column;
@@ -381,7 +392,7 @@ footer p {
         height: 50%;
         background: #0f095cd0;
         top: 64px;
-        left: -110%;
+        left: -120%;
         justify-content: center;
         align-items: center;
         transition: all .5s;
@@ -391,16 +402,6 @@ footer p {
     .nav-item {
         margin-left: 0;
         margin-bottom: 10px;
-    }
-
-    .nav-link {
-        transition: all .5s ease-in-out;
-    }
-
-    .nav-item:hover .nav-link {
-        background-color: rgba(255, 255, 255, 0.87);
-        padding: 5px 7px;
-        color: #070708;
     }
 
     nav ul li {
@@ -452,7 +453,7 @@ footer p {
     }
 
     .highlights {
-        margin-top: 70px;
+        margin-top: 130px;
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -465,7 +466,7 @@ footer p {
     }
 
     .highlights-second-half img {
-        width: 328px;
+        width: 250px;
         height: 248px;
         margin: 0;
         margin-top: 30px;
@@ -474,6 +475,14 @@ footer p {
     .images,
     .videos {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gallery {
+        margin-top: 40px;
+    }
+
+    .video-gallery {
+        margin-top: 50px;
     }
 
     footer {
